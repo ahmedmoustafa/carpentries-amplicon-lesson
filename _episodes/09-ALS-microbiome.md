@@ -6,19 +6,14 @@ title: "ALS Microbiome"
 teaching: 10
 exercises: 2
 questions:
-- "How do I analyze 16S amplicons dataset?"
+- "How different ecosystems differ in terms of their microbial composition?"
 objectives:
-- "Explain how to use RMarkdown with the new lesson template."
-- "Demonstrate how to include pieces of code, figures, and challenges."
+- "Learn how to process amplicon (16S) data"
+- "Explore microbiome composition based on 16S profiling"
 keypoints:
-- "Edit the .Rmd files not the .md files"
-- "Run `make serve` to knit documents and preview lesson website locally"
-output:
-  github_document:
-    toc: true
-    toc_depth: 3
+- "keypoint #1"
+- "keypoint #2"
 ---
-
 
 
 
@@ -1071,31 +1066,41 @@ ord.nmds.bray = ordinate(ps_norm, method="NMDS", distance="bray")
 
 ~~~
 Run 0 stress 0.1867397 
-Run 1 stress 0.1999479 
-Run 2 stress 0.1940443 
-Run 3 stress 0.1677136 
+Run 1 stress 0.1828827 
 ... New best solution
-... Procrustes: rmse 0.1794633  max resid 0.6569798 
-Run 4 stress 0.1834096 
-Run 5 stress 0.1892393 
-Run 6 stress 0.1865757 
-Run 7 stress 0.1695194 
-Run 8 stress 0.1741992 
-Run 9 stress 0.1679989 
-... Procrustes: rmse 0.01872377  max resid 0.06159805 
-Run 10 stress 0.1834126 
-Run 11 stress 0.1988246 
-Run 12 stress 0.1965152 
-Run 13 stress 0.1867397 
-Run 14 stress 0.1865754 
-Run 15 stress 0.1797132 
+... Procrustes: rmse 0.1620506  max resid 0.3025445 
+Run 2 stress 0.1741992 
+... New best solution
+... Procrustes: rmse 0.1070769  max resid 0.3604682 
+Run 3 stress 0.177454 
+Run 4 stress 0.1834108 
+Run 5 stress 0.1693975 
+... New best solution
+... Procrustes: rmse 0.06662449  max resid 0.2119999 
+Run 6 stress 0.1865761 
+Run 7 stress 0.2055153 
+Run 8 stress 0.1858193 
+Run 9 stress 0.1808859 
+Run 10 stress 0.1889447 
+Run 11 stress 0.1999791 
+Run 12 stress 0.1826301 
+Run 13 stress 0.1693971 
+... New best solution
+... Procrustes: rmse 0.000485512  max resid 0.001148877 
+... Similar to previous best
+Run 14 stress 0.1677136 
+... New best solution
+... Procrustes: rmse 0.06797712  max resid 0.1804131 
+Run 15 stress 0.1960027 
 Run 16 stress 0.1867397 
-Run 17 stress 0.1693584 
-Run 18 stress 0.1826301 
-Run 19 stress 0.1921692 
-Run 20 stress 0.1808857 
-*** No convergence -- monoMDS stopping criteria:
-    20: stress ratio > sratmax
+Run 17 stress 0.1828827 
+Run 18 stress 0.1677135 
+... New best solution
+... Procrustes: rmse 0.0008985555  max resid 0.003152553 
+... Similar to previous best
+Run 19 stress 0.180463 
+Run 20 stress 0.1693974 
+*** Solution reached
 ~~~
 {: .output}
 
