@@ -24,8 +24,6 @@ output:
 
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg" title="Stephen Hawking" align="right">
-
 ## Introduction
 
 Amyotrophic lateral sclerosis ([ALS](https://en.wikipedia.org/wiki/Amyotrophic_lateral_sclerosis)) is a neurodegenerative neuromuscular disease that results in the progressive loss of motor neurons that control voluntary muscles. About 20 genes are associated with ALS, most importantly [C9orf72](https://en.wikipedia.org/wiki/C9orf72), which accounts for about 40% of the cases. In addition to genetic risk, environmental factors such as smoking and physical activity represent potential risks. Among the environmental factors is the gut microbiota, which has been shown to contribute and affect mental health, leading to the emerging paradigm of the [gut-brain axis](https://en.wikipedia.org/wiki/Gut%E2%80%93brain_axis) ([GBA](https://en.wikipedia.org/wiki/Gut%E2%80%93brain_axis)). Therefore, [Hertzberg et al. 2021](https://pubmed.ncbi.nlm.nih.gov/33818222/) examined the gut microbiome profiles between ALS patients and their corresponding health caregivers using 16S rRNA.
@@ -734,8 +732,6 @@ The return `data.frame`(s) has a row for each unique pairing of forward/reverse 
 
 ## Construct Sequence Table
 
-<a href="https://en.wikipedia.org/wiki/Amplicon_sequence_variant"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/ASVs_vs_OTU.png" title="ASVs vs OTUs by Benjamin John Callahan" align="right" width="300px"></a>
-
 We are almost there! Now we can build the [amplicon sequence variant](https://en.wikipedia.org/wiki/Amplicon_sequence_variant) ([ASV](https://en.wikipedia.org/wiki/Amplicon_sequence_variant)) table. The ASV (DADA2's) approach provides more precise, tractable, reproducible, and comprehensive estimate of samples composition compared to the traditional [operational taxonomic unit](https://en.wikipedia.org/wiki/Operational_taxonomic_unit) ([OTU](https://en.wikipedia.org/wiki/Operational_taxonomic_unit)) approach. For more on the topic, read the [microbiome informatics: OTU vs. ASV](https://www.zymoresearch.com/blogs/blog/microbiome-informatics-otu-vs-asv) blog post by [Zymo Research](https://www.zymoresearch.com/).
 
 The construction of the ASV table is performed using the [`makeSequenceTable`](https://rdrr.io/bioc/dada2/man/makeSequenceTable.html), which takes the list of samples `data.frame`s , each of which is a list of the ASVs and their abundances, then it identifies the unique ASVs across all samples.
@@ -776,11 +772,9 @@ dim(seqtab)
 
 
 
-As shown above, the dimensions of the `seqtab` `matrix` are 18 $\times$ 293, indicating that there are 293 unique ASVs across the 18 processed samples.
+As shown above, the dimensions of the `seqtab` `matrix` are `m1` $\times$ `n1`, indicating that there are `n1` unique ASVs across the `nrow(seqtab)` processed samples.
 
 ## Removal of Chimeras
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Chimera_Apulia_Louvre_K362.jpg" title="Chimera Apulia Louvre" align="right" width="200px">
 
 ASVs constructed from two parents (*bimera*) can now be identified and removed from the denoised ASVs using the [`removeBimeraDenovo`](https://rdrr.io/bioc/dada2/man/removeBimeraDenovo.html) method:
 
@@ -816,7 +810,7 @@ dim(seqtab.nochim)
 
 
 
-18 $\times$ 275, so  18 bimeras were identified and removed. Thus, the remaining (non-chimeric) ASVs (overall; not only the unique) after the removal the bimeras is 99%
+`m2` $\times$ `n2`, so  `n1 - n2` bimeras were identified and removed. Thus, the remaining (non-chimeric) ASVs (overall; not only the unique) after the removal the bimeras is `scales::percent(sum(seqtab.nochim)/sum(seqtab))`
 
 ### Track reads through the pipeline
 
@@ -869,7 +863,7 @@ Looks good! We kept the majority of our raw reads, and there is no over-large dr
 
 ### Assign Taxonomy
 
-Using the [Naïve Bayesian Classifier](http://www.ncbi.nlm.nih.gov/pubmed/17586664) algorithm, **DADA2** assigns taxonomic classification to the sequence variants with the [`assignTaxonomy`](https://rdrr.io/bioc/dada2/man/assignTaxonomy.html) method, which takes also as input the reference formatted FASTA sequence. A copy of the SILVA train set is located under the `data/silva` subfolder, which can also be downloaded from here <a href="https://doi.org/10.5281/zenodo.3986799"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.3986799.svg" alt="DOI"></a>
+Using the [Naïve Bayesian Classifier](http://www.ncbi.nlm.nih.gov/pubmed/17586664) algorithm, **DADA2** assigns taxonomic classification to the sequence variants with the [`assignTaxonomy`](https://rdrr.io/bioc/dada2/man/assignTaxonomy.html) method, which takes also as input the reference formatted FASTA sequence. A copy of the SILVA train set is located under the `data/silva` subfolder, which can also be downloaded from [here](https://doi.org/10.5281/zenodo.3986799)
 
 
 
@@ -1077,49 +1071,31 @@ ord.nmds.bray = ordinate(ps_norm, method="NMDS", distance="bray")
 
 ~~~
 Run 0 stress 0.1867397 
-Run 1 stress 0.175407 
+Run 1 stress 0.1999479 
+Run 2 stress 0.1940443 
+Run 3 stress 0.1677136 
 ... New best solution
-... Procrustes: rmse 0.1906148  max resid 0.3456883 
-Run 2 stress 0.1693585 
-... New best solution
-... Procrustes: rmse 0.0944129  max resid 0.2300851 
-Run 3 stress 0.1693584 
-... New best solution
-... Procrustes: rmse 0.0003075725  max resid 0.001079332 
-... Similar to previous best
-Run 4 stress 0.1867397 
-Run 5 stress 0.1903481 
-Run 6 stress 0.1741992 
-Run 7 stress 0.1679987 
-... New best solution
-... Procrustes: rmse 0.05451368  max resid 0.1854547 
-Run 8 stress 0.1677133 
-... New best solution
-... Procrustes: rmse 0.01862123  max resid 0.06127118 
-Run 9 stress 0.1808858 
-Run 10 stress 0.1677133 
-... Procrustes: rmse 0.0003686297  max resid 0.00129388 
-... Similar to previous best
-Run 11 stress 0.1797132 
-Run 12 stress 0.1679987 
-... Procrustes: rmse 0.01854935  max resid 0.06093425 
-Run 13 stress 0.1834111 
-Run 14 stress 0.1954997 
-Run 15 stress 0.1693584 
-Run 16 stress 0.1679987 
-... Procrustes: rmse 0.01854461  max resid 0.06091515 
-Run 17 stress 0.1677132 
-... New best solution
-... Procrustes: rmse 0.0002209879  max resid 0.0007746526 
-... Similar to previous best
-Run 18 stress 0.1677132 
-... Procrustes: rmse 2.720043e-05  max resid 9.44808e-05 
-... Similar to previous best
-Run 19 stress 0.1774541 
-Run 20 stress 0.1677135 
-... Procrustes: rmse 0.0004054578  max resid 0.001422965 
-... Similar to previous best
-*** Solution reached
+... Procrustes: rmse 0.1794633  max resid 0.6569798 
+Run 4 stress 0.1834096 
+Run 5 stress 0.1892393 
+Run 6 stress 0.1865757 
+Run 7 stress 0.1695194 
+Run 8 stress 0.1741992 
+Run 9 stress 0.1679989 
+... Procrustes: rmse 0.01872377  max resid 0.06159805 
+Run 10 stress 0.1834126 
+Run 11 stress 0.1988246 
+Run 12 stress 0.1965152 
+Run 13 stress 0.1867397 
+Run 14 stress 0.1865754 
+Run 15 stress 0.1797132 
+Run 16 stress 0.1867397 
+Run 17 stress 0.1693584 
+Run 18 stress 0.1826301 
+Run 19 stress 0.1921692 
+Run 20 stress 0.1808857 
+*** No convergence -- monoMDS stopping criteria:
+    20: stress ratio > sratmax
 ~~~
 {: .output}
 
