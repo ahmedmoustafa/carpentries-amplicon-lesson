@@ -194,29 +194,6 @@ instructions and solutions. For instance this:
 {: .challenge}
 ````
 
-will generate this:
-
-> ## Challenge: Can you do it?
->
-> What is the output of this command?
->
-> 
-> ~~~
-> paste("This", "new", "template", "looks", "good")
-> ~~~
-> {: .language-r}
->
-> > ## Solution
-> >
-> > 
-> > ~~~
-> > [1] "This new template looks good"
-> > ~~~
-> > {: .output}
-> {: .solution}
-{: .challenge}
-
-
 > ## On Branch Names and Automation
 >
 > For lessons that do not use R, the code included in the lessons is not

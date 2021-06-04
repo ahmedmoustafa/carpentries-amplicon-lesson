@@ -25,7 +25,7 @@ output:
 
 
 <div align="center">
-![Stephen Hawking](images/stephen_hawking.png)
+<img src="https://live.staticflickr.com/3566/3462938929_22b75204a4_b_d.jpg" title="Stephen Hawking" height="300px">
 </div>
 
 <div align="right"><small>*Stephen Hawking*. Photo Credit: [NASA/Paul E. Alers](https://flic.kr/p/6h1t6B).</small></div>
@@ -1081,39 +1081,38 @@ ord.nmds.bray = ordinate(ps_norm, method="NMDS", distance="bray")
 
 ~~~
 Run 0 stress 0.1867397 
-Run 1 stress 0.1693973 
+Run 1 stress 0.1828827 
 ... New best solution
-... Procrustes: rmse 0.1892332  max resid 0.6461449 
-Run 2 stress 0.1797134 
-Run 3 stress 0.1861228 
-Run 4 stress 0.1693584 
+... Procrustes: rmse 0.1620513  max resid 0.302552 
+Run 2 stress 0.1679987 
 ... New best solution
-... Procrustes: rmse 0.02745143  max resid 0.08662756 
-Run 5 stress 0.1869715 
-Run 6 stress 0.1867397 
-Run 7 stress 0.1892393 
-Run 8 stress 0.1889446 
-Run 9 stress 0.200106 
-Run 10 stress 0.1828827 
-Run 11 stress 0.180463 
-Run 12 stress 0.1766461 
-Run 13 stress 0.1677135 
-... New best solution
-... Procrustes: rmse 0.06001231  max resid 0.1822244 
-Run 14 stress 0.1886004 
-Run 15 stress 0.1677135 
-... New best solution
-... Procrustes: rmse 4.204048e-05  max resid 0.0001343498 
+... Procrustes: rmse 0.1318099  max resid 0.3668481 
+Run 3 stress 0.1679988 
+... Procrustes: rmse 0.000308857  max resid 0.00109335 
 ... Similar to previous best
-Run 16 stress 0.1693975 
-Run 17 stress 0.1807519 
-Run 18 stress 0.1834128 
-Run 19 stress 0.1677134 
+Run 4 stress 0.1693978 
+Run 5 stress 0.1693972 
+Run 6 stress 0.1885589 
+Run 7 stress 0.1889447 
+Run 8 stress 0.1797132 
+Run 9 stress 0.1695201 
+Run 10 stress 0.2019523 
+Run 11 stress 0.1693979 
+Run 12 stress 0.1797132 
+Run 13 stress 0.1889447 
+Run 14 stress 0.1808858 
+Run 15 stress 0.1807519 
+Run 16 stress 0.1907412 
+Run 17 stress 0.1677135 
 ... New best solution
-... Procrustes: rmse 7.981124e-05  max resid 0.0002786256 
-... Similar to previous best
-Run 20 stress 0.1945464 
-*** Solution reached
+... Procrustes: rmse 0.01847632  max resid 0.06063897 
+Run 18 stress 0.1679987 
+... Procrustes: rmse 0.01845961  max resid 0.06050656 
+Run 19 stress 0.3670522 
+Run 20 stress 0.1766461 
+*** No convergence -- monoMDS stopping criteria:
+    19: stress ratio > sratmax
+     1: scale factor of the gradient < sfgrmin
 ~~~
 {: .output}
 

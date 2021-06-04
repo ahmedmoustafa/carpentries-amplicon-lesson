@@ -28,7 +28,7 @@ library(printr)
 ```
 
 <div align="center">
-![Stephen Hawking](images/stephen_hawking.png)
+<img src="https://live.staticflickr.com/3566/3462938929_22b75204a4_b_d.jpg" title="Stephen Hawking" height="300px">
 </div>
 
 <div align="right"><small>*Stephen Hawking*. Photo Credit: [NASA/Paul E. Alers](https://flic.kr/p/6h1t6B).</small></div>
