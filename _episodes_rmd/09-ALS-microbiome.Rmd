@@ -4,24 +4,19 @@ title: "ALS Microbiome"
 teaching: 10
 exercises: 2
 questions:
-- "How do I analyze 16S amplicons dataset?"
+- "How different ecosystems differ in terms of their microbial composition?"
 objectives:
-- "Explain how to use RMarkdown with the new lesson template."
-- "Demonstrate how to include pieces of code, figures, and challenges."
+- "Learn how to process amplicon (16S) data"
+- "Explore microbiome composition based on 16S profiling"
 keypoints:
-- "Edit the .Rmd files not the .md files"
-- "Run `make serve` to knit documents and preview lesson website locally"
-output:
-  github_document:
-    toc: true
-    toc_depth: 3
+- "keypoint #1"
+- "keypoint #2"
 ---
 
 ```{r, include=FALSE}
 source("../bin/chunk-options.R")
 knitr_fig_path("09-")
 ```
-
 
 ```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
 library(printr)
