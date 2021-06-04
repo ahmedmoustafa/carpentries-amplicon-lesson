@@ -249,7 +249,7 @@ m1 = nrow(seqtab)
 n1 = ncol(seqtab)
 ```
 
-As shown above, the dimensions of the `seqtab` `matrix` are `r nrow(seqtab)` $\times$ `r n1`, indicating that there are `r n1` unique ASVs across the `r nrow(seqtab)` processed samples.
+As shown above, the dimensions of the `seqtab` `matrix` are `m1` $\times$ `n1`, indicating that there are `n1` unique ASVs across the `nrow(seqtab)` processed samples.
 
 ## Removal of Chimeras
 
@@ -274,7 +274,7 @@ m2 = nrow(seqtab.nochim)
 n2 = ncol(seqtab.nochim)
 ```
 
-`r m2` $\times$ `r n2`, so  `r n1 - n2` bimeras were identified and removed. Thus, the remaining (non-chimeric) ASVs (overall; not only the unique) after the removal the bimeras is `r scales::percent(sum(seqtab.nochim)/sum(seqtab))`
+`m2` $\times$ `n2`, so  `n1 - n2` bimeras were identified and removed. Thus, the remaining (non-chimeric) ASVs (overall; not only the unique) after the removal the bimeras is `scales::percent(sum(seqtab.nochim)/sum(seqtab))`
 
 ### Track reads through the pipeline
 
