@@ -27,11 +27,7 @@ knitr_fig_path("09-")
 library(printr)
 ```
 
-<div align="center">
-<img src="https://live.staticflickr.com/3566/3462938929_22b75204a4_b_d.jpg" title="Stephen Hawking" height="300px">
-</div>
-
-<div align="right"><small>*Stephen Hawking*. Photo Credit: [NASA/Paul E. Alers](https://flic.kr/p/6h1t6B).</small></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg" title="Stephen Hawking" align="right">
 
 ## Introduction
 
@@ -253,7 +249,7 @@ m1 = nrow(seqtab)
 n1 = ncol(seqtab)
 ```
 
-As shown above, the dimensions of the `seqtab` `matrix` are `r m1` $\times$ `r n1`, indicating that there are `r n1` unique ASVs across the `r m1` processed samples.
+As shown above, the dimensions of the `seqtab` `matrix` are `r nrow(seqtab)` $\times$ `r n1`, indicating that there are `r n1` unique ASVs across the `r nrow(seqtab)` processed samples.
 
 ## Removal of Chimeras
 
