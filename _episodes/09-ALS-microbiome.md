@@ -90,7 +90,7 @@ library(tidyverse)
 
 
 ~~~
-── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
+── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.1 ──
 ~~~
 {: .output}
 
@@ -107,7 +107,7 @@ library(tidyverse)
 
 
 ~~~
-── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ~~~
@@ -1066,40 +1066,44 @@ ord.nmds.bray = ordinate(ps_norm, method="NMDS", distance="bray")
 
 ~~~
 Run 0 stress 0.1867397 
-Run 1 stress 0.1828827 
+Run 1 stress 0.169398 
 ... New best solution
-... Procrustes: rmse 0.1620506  max resid 0.3025445 
-Run 2 stress 0.1741992 
+... Procrustes: rmse 0.1893135  max resid 0.6463014 
+Run 2 stress 0.1679988 
 ... New best solution
-... Procrustes: rmse 0.1070769  max resid 0.3604682 
-Run 3 stress 0.177454 
-Run 4 stress 0.1834108 
-Run 5 stress 0.1693975 
+... Procrustes: rmse 0.06233416  max resid 0.1833919 
+Run 3 stress 0.1974217 
+Run 4 stress 0.1892393 
+Run 5 stress 0.1677138 
 ... New best solution
-... Procrustes: rmse 0.06662449  max resid 0.2119999 
-Run 6 stress 0.1865761 
-Run 7 stress 0.2055153 
-Run 8 stress 0.1858193 
-Run 9 stress 0.1808859 
-Run 10 stress 0.1889447 
-Run 11 stress 0.1999791 
-Run 12 stress 0.1826301 
-Run 13 stress 0.1693971 
+... Procrustes: rmse 0.01863524  max resid 0.06136232 
+Run 6 stress 0.1693976 
+Run 7 stress 0.1867397 
+Run 8 stress 0.1693971 
+Run 9 stress 0.1936954 
+Run 10 stress 0.1677132 
 ... New best solution
-... Procrustes: rmse 0.000485512  max resid 0.001148877 
+... Procrustes: rmse 0.0007398958  max resid 0.002593854 
 ... Similar to previous best
-Run 14 stress 0.1677136 
-... New best solution
-... Procrustes: rmse 0.06797712  max resid 0.1804131 
-Run 15 stress 0.1960027 
-Run 16 stress 0.1867397 
-Run 17 stress 0.1828827 
-Run 18 stress 0.1677135 
-... New best solution
-... Procrustes: rmse 0.0008985555  max resid 0.003152553 
+Run 11 stress 0.1808857 
+Run 12 stress 0.183411 
+Run 13 stress 0.1695199 
+Run 14 stress 0.1808855 
+Run 15 stress 0.1677134 
+... Procrustes: rmse 0.0001604666  max resid 0.0005610174 
 ... Similar to previous best
-Run 19 stress 0.180463 
-Run 20 stress 0.1693974 
+Run 16 stress 0.1828827 
+Run 17 stress 0.1807519 
+Run 18 stress 0.1677132 
+... Procrustes: rmse 1.606749e-05  max resid 5.149544e-05 
+... Similar to previous best
+Run 19 stress 0.1677132 
+... New best solution
+... Procrustes: rmse 0.0003017354  max resid 0.001058538 
+... Similar to previous best
+Run 20 stress 0.1677133 
+... Procrustes: rmse 0.0003209395  max resid 0.001126786 
+... Similar to previous best
 *** Solution reached
 ~~~
 {: .output}
