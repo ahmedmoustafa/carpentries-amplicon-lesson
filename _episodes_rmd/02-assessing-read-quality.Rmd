@@ -1,0 +1,30 @@
+---
+source: Rmd
+title: "Assessing Read Quality"
+teaching: 10
+exercises: 2
+questions:
+- "How different ecosystems differ in terms of their microbial composition?"
+objectives:
+- "Learn how to process amplicon (16S) data"
+- "Explore microbiome composition based on 16S profiling"
+keypoints:
+- "keypoint #1"
+- "keypoint #2"
+---
+
+```{r, include=FALSE}
+source("../bin/chunk-options.R")
+knitr_fig_path("09-")
+```
+
+```{r libraries, echo=FALSE, message=FALSE, warning=FALSE}
+library(printr)
+```
+
+## Assessing Read Quality
+
+
+
+
+{% include links.md %}
